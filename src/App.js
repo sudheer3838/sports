@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+// import Hero from './componentss/Hero';
+// import Nav from './componentss/Navigation'
+import Search from './componentss/Search';
+import Stories from './componentss/Stories';
+import Pagination from './componentss/Pagination';
+
+// import {UseContext} from 'react'
+// import {AppContext} from './context'
+import { useGlobalContext } from './context'
 
 function App() {
+  // const data = useGlobalContext();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      {/* <div>{data}</div> */}
+      <Search></Search>
+      <Pagination ></Pagination>
+      <Stories></Stories>
     </div>
+
   );
 }
 
